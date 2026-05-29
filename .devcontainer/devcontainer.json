@@ -1,0 +1,30 @@
+{
+  "name": "Rust",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-bullseye",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "sainnhe.everforest"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Everforest Dark",
+        "editor.fontLigatures": true,
+        "rust-analyzer.check.command": "clippy",
+        "rust-analyzer.cargo.allFeatures": true,
+        "[rust]": {
+          "editor.defaultFormatter": "rust-lang.rust-analyzer",
+          "editor.formatOnSave": true
+        },
+        "[toml]": {
+          "editor.defaultFormatter": "tamasfe.even-better-toml",
+          "editor.formatOnSave": true
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "rustup component add clippy rustfmt rust-src"
+}
