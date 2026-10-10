@@ -1574,7 +1574,7 @@ mod tests {
             bracketed_host(b"v1.fe80::a"),
         ] {
             h.try_as_domain().unwrap_err();
-            h.clone().try_into_domain().unwrap_err();
+            h.try_into_domain().unwrap_err();
         }
     }
 
